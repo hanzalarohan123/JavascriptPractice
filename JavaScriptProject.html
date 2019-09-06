@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Test your reactions</title>
+    <style>
+       
+       .object
+       {
+           border: 1px solid black;
+           background-color: aqua;
+           width:200px;
+           height: 200px;
+           border-radius:50%;
+           display: inherit;
+           position: absolute;
+           left: auto;
+           bottom: auto;
+
+       }
+       #mainDiv
+       {
+           width: 100%;
+           height: 800px;
+           margin-top: 250px;
+       }
+       #firstDiv
+       {
+           margin-top: 0px;
+           width: 100%;
+           height: 250px;
+           position: absolute;
+       }
+
+    </style>
 </head>
 <body>
+    
+    <div id="fistDiv">
+    <h1> Test your Reactions!</h1>
+    <p>Click on the boxes and circle as fast as you can</p>
+    <p id="timeTaken">Time taken</p>
+    </div>
+    <div id="mainDiv">
+    <div class="object" id="object"></div>
+    </div>
+    <script>
+        document.getElementById("object").onclick =
+        function()
+        {
+            //randomWidth and height
+            var randWidthHeig= Math.floor((Math.random() * 200) + 100);            
+            document.getElementById("object").style.width=randWidthHeig+"px";
+            document.getElementById("object").style.width = randWidthHeig + "px";
+            
+            //background color random
+            var colors = ["red", "blue", "green", "orange", "black", "aqua", "yellow"];
+            var num= Math.floor((Math.random() * 6) + 0);
+            document.getElementById("object").style.backgroundColor=colors[num];
+            
+            //randomShapes
+            var shape=[0,50];
+            var ranShape= Math.floor((Math.random() * 2) + 0);
+            document.getElementById("object").style.borderRadius=shape[ranShape]+"%";
+
+
+            //randomPositionLeft
+            var letRan= Math.floor((Math.random() * 100) + 1);
+            document.getElementById("object").style.left=letRan+"%";
+            
+            //randomPositionBottom
+            var botRan=Math.floor((Math.random() * 80) + 1);
+            document.getElementById("object").style.bottom=botRan+"%";
+         
+
+           
+
+            //timeTaken
+            var date = new Date();
+            var s=time.getMilliseconds();
+            var time=date.getMilliseconds().toString();
+            
+                        
+            document.getElementById("timeTaken").innerHTML = ("Time taken :" + time + "s");
+            
+
+            
+        } 
+         
+        
+    </script>
     
 </body>
 </html>
