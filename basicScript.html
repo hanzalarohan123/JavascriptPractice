@@ -9,26 +9,47 @@
     button
     {
         width: auto ;
-        height: 30px;
+        height: auto;
         display: block;
-        border: 0.5px solid black;
+        border: aqua solid black;
         /*box-shadow: 0.5rem;*/
         border-radius: 5px;
         color:black;
         margin: 2px auto;
     }
-    p
+    /* p
     {
         display: inline-block;
         margin: auto auto; 
 
+    } */
+    .xxx
+    {
+        border: 1px solid black;
+        border-radius: 50%;
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        
+    }
+    #red
+    {
+        background-color: red;
+    }
+    #blue
+    {
+        background-color: blue;
+    }
+    #green
+    {
+        background-color: green;
     }
     
     </style>
 </head>
 
 <body>
-    
+<!--     
     <button id="but"  >
     <p id="one">Hello motherfucker</p>
     </button>
@@ -36,22 +57,41 @@
     <p id="para">HAHAHah no one can cange me</p>
     
     
-    <button id="style">style text</button>
+    <button id="style">style text</button> -->
     
+    <div class="xxx" id="red"></div>
+    <div class="xxx" id="green"> 
+    </div>
+    <div class="xxx" id="blue"></div>
     
-    
-    
+    <button id="dis">disappearing circles </button>
     
     
     <script>
 
-        document.getElementById("but").onclick= 
-        function()
-        {
-            document.getElementById("para").innerHTML="fuck i chnge you";
+        // document.getElementById("but").onclick= 
+        // function()
+        // {
+        //     document.getElementById("para").innerHTML="fuck i chnge you";
         
 
+        // }
+        // document.getElementById("style").onclick = function()
+        // {
+        //     document.getElementById("style").style.display="none";
+        // }
+        document.getElementById("red").onclick = function()
+        {
+            document.getElementById("red").style.display="none";
         }
+        
+            document.getElementById("green").onclick = function () {
+                document.getElementById("green").style.display = "none";
+            }
+            
+                document.getElementById("blue").onclick = function () {
+                    document.getElementById("blue").style.display = "none";
+                }
         
     </script>
 </body>
